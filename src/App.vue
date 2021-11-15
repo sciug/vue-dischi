@@ -26,6 +26,7 @@ export default {
 
 <style lang="scss">
 @import './assets/scss/variables.scss';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
 body{
   background-color: $bg_color;
 }
