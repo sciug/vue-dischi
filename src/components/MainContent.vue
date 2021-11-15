@@ -1,5 +1,6 @@
 <template>
-  <div class="row gy-3">
+ <div>
+      <div class="row gy-3" v-if="!loading">
       <div class="col-2" v-for="album in albums" :key="album.title">
           <div class="album_card text-center">
               <img :src="album.poster" :alt="album.title" class="img-fluid">
@@ -10,6 +11,17 @@
           </div>
       </div>
   </div>
+  <div v-else class="loading container">
+      <div class="row">
+          <div class="col">
+              <img src="../assets/img/spin.svg" alt="" class="spin">
+              <p class="mt-2 loading_text">loading</p>
+
+          </div>
+      </div>
+      
+  </div>
+ </div>
 </template>
 
 <script>
@@ -54,5 +66,20 @@ methods:{
     background-color: $secondary-color;
     height: 330px;
 }
+.loading{
+    color: white;
+    text-align: center;
+}
+.spin{
+    width: 30px;
+    animation: loading 1s ease infinite;
+}
 
+@keyframes loading {
+    to{transform: rotate(1turn);}
+    
+}
+.loading_text{
+    letter-spacing: 1px;
+}
 </style>
