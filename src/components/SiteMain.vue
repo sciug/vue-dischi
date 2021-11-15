@@ -1,5 +1,5 @@
 <template>
-  <main class="container">
+  <main class="container my-5">
       <MainContent/>
   </main>
 </template>

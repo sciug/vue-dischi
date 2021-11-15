@@ -1,10 +1,12 @@
 <template>
-  <div class="row">
-      <div class="col-md-2" v-for="album in albums" :key="album.title">
-          <div class="album_card">
+  <div class="row gy-3">
+      <div class="col-2" v-for="album in albums" :key="album.title">
+          <div class="album_card text-center">
               <img :src="album.poster" :alt="album.title" class="img-fluid">
-              <h3>{{album.author}}</h3>
-              <h4>{{album.year}}</h4>
+              <h5 class="text-white text-uppercase mt-3">{{album.title}}</h5>
+               <h6 class="mb-0">{{album.author}}</h6>
+
+              <h6 class="mt-0">{{album.year}}</h6>
           </div>
       </div>
   </div>
@@ -48,8 +50,9 @@ methods:{
 @import '../assets/scss/variables.scss';
 .album_card{
     color: $info_color;
-    padding: 1rem;
+    padding: 1.3rem;
     background-color: $secondary-color;
+    height: 330px;
 }
 
 </style>
