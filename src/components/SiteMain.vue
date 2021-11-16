@@ -8,12 +8,14 @@
 import MainContent from './MainContent.vue'
 export default {
     components:{
-        MainContent
+        MainContent,
+        
     }
 
 }
 </script>
 
 <style lang="scss">
+
 
 </style>

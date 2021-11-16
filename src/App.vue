@@ -27,9 +27,10 @@ export default {
 <style lang="scss">
 @import './assets/scss/variables.scss';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
-@import '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
 body{
   background-color: $bg_color;
+  font-family: 'Rubik', sans-serif;
 }
 
 </style>

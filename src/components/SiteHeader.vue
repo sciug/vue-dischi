@@ -7,6 +7,7 @@
                   <img src="../assets/img/spotify.svg" alt="" class="img-fluid">
               </div>
               
+              
           </div>
       </div>
 
