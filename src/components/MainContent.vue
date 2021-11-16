@@ -1,9 +1,9 @@
 <template>
  <div>
-     <Select @filter-author="filter"/>
+     <Select @filter-genre="filter" class="select-container"/>
 
       <div class="row gy-4 justify-content-center" v-if="!loading">
-      <div class="col-md-4 col-xl-2" v-for="album in getFilterAuthors" :key="album.title">
+      <div class="col-md-4 col-xl-2" v-for="album in getFilterGenres" :key="album.title">
           <div class="album_card text-center">
               <div class="img_wrapper">
                   <img :src="album.poster" :alt="album.title" class="album_img">
@@ -42,7 +42,7 @@ data(){
          Api_URL:"https://flynn.boolean.careers/exercises/api/array/music",
          loading: true,
          error:"",
-         selectedAuthor:""
+         selectedGenre:""
     }
    
 },
@@ -65,17 +65,17 @@ methods:{
         })
     },
     filter(selected){
-        this.selectedAuthor= selected
+        this.selectedGenre= selected
     }
 },
 computed:{
-    getFilterAuthors(){
-        console.log(this.selectedAuthor);
-        if(this.selectedAuthor==""){
+    getFilterGenres(){
+        console.log(this.selectedGenre);
+        if(this.selectedGenre==""){
             return this.albums
         }
     const filtered = this.albums.filter(album=>{
-        return album.author ==this.selectedAuthor
+        return album.genre ==this.selectedGenre
     });
     return filtered
 }
@@ -160,6 +160,8 @@ computed:{
 
    
 }
-
+.select-container{
+    margin-bottom: 3rem;
+}
 
 </style>
