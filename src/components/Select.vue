@@ -1,16 +1,16 @@
 <template>
   <div class="row justify-content-center">
     <div class="col-4">
-       <select name="author" id="author" class="select" @change="log">
+       <select v-model="selected" name="author" id="author" class="select" @change="$emit('filter-author', selected)" placeholder="select author">
                     <option value="Bon Jovi"><span>Bon Jovi</span></option>
                     <option value="Queen"><span>Queen</span></option>
                     <option value="Sting"><span>Sting</span></option>
                     <option value="Steve Gadd Band"><span>Steve Gadd Band</span></option>
                     <option value="Iron Maiden"><span>Iron Maiden</span></option>
                     <option value="Deep Purple"><span>Deep Purple</span></option>
-                    <option value="Metallica"><span>Queen</span></option>
-                    <option value="Dave Weckl"><span>Sting</span></option>
-                    <option value="Michael Jacjson"><span>Queen</span></option>
+                    <option value="Metallica"><span>Metallica</span></option>
+                    <option value="Dave Weckl"><span>Dave Weckl</span></option>
+                    <option value="Michael Jacjson"><span>Michael Jacjson</span></option>
         </select>
 
     </div>
@@ -22,14 +22,10 @@
 export default {
   data(){
     return{
-      filterAuthor: document.getElementById("author")
+      selected: ""
     }
   },
-  methods:{
-    log(){
-      console.log(this.filterAuthor)
-    }
-  }
+ 
     
 
 }
