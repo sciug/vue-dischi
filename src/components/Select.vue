@@ -1,7 +1,7 @@
 <template>
   <div class="row justify-content-center">
     <div class="col-4">
-       <select name="difficulty" id="difficulty" class="select" @change="$emit('filter-author', )">
+       <select name="author" id="author" class="select" @change="log">
                     <option value="Bon Jovi"><span>Bon Jovi</span></option>
                     <option value="Queen"><span>Queen</span></option>
                     <option value="Sting"><span>Sting</span></option>
@@ -22,7 +22,12 @@
 export default {
   data(){
     return{
-      filterAuthor: ""
+      filterAuthor: document.getElementById("author")
+    }
+  },
+  methods:{
+    log(){
+      console.log(this.filterAuthor)
     }
   }
     
